@@ -1,0 +1,77 @@
+[
+    {
+        "tamanho": 10,
+        "algoritmo": "BFS",
+        "tempo": 0.04990839958190918
+    },
+    {
+        "tamanho": 9,
+        "algoritmo": "BFS",
+        "tempo": 0.008821249008178711
+    },
+    {
+        "tamanho": 8,
+        "algoritmo": "A*",
+        "tempo": 0.015170097351074219
+    },
+    {
+        "tamanho": 9,
+        "algoritmo": "A*",
+        "tempo": 0.026806354522705078
+    },
+    {
+        "tamanho": 10,
+        "algoritmo": "A*",
+        "tempo": 0.16285467147827148
+    },
+    {
+        "tamanho": 11,
+        "algoritmo": "A*",
+        "tempo": 1.749488115310669
+    },
+    {
+        "tamanho": 12,
+        "algoritmo": "A*",
+        "tempo": 12.359289169311523
+    },
+    {
+        "tamanho": 13,
+        "algoritmo": "A*",
+        "tempo": 35.53812122344971
+    },
+    {
+        "tamanho": 14,
+        "algoritmo": "A*",
+        "tempo": 272.1858789920807
+    },
+    {
+        "tamanho": 12,
+        "algoritmo": "Gen\u00e9tico",
+        "tempo": 0.33107447624206543
+    },
+    {
+        "tamanho": 12,
+        "algoritmo": "PSO",
+        "tempo": 0.0977632999420166
+    },
+    {
+        "tamanho": 8,
+        "algoritmo": "DFS",
+        "tempo": 0.0010268688201904297
+    },
+    {
+        "tamanho": 9,
+        "algoritmo": "DFS",
+        "tempo": 0.0
+    },
+    {
+        "tamanho": 10,
+        "algoritmo": "DFS",
+        "tempo": 0.0010082721710205078
+    },
+    {
+        "tamanho": 10,
+        "algoritmo": "UCS",
+        "tempo": 0.06043696403503418
+    }
+]
