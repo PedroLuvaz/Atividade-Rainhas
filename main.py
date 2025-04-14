@@ -7,12 +7,12 @@ from Algoritmos.ucs_solver import resolver_ucs
 from Algoritmos.astar_solver import resolver_astar
 
 
-
-def salvar_estatisticas(tempo, tamanho, algoritmo):
+def salvar_estatisticas(tempo, tamanho, algoritmo, nos):
     dados = {
         "tamanho": tamanho,
         "algoritmo": algoritmo,
-        "tempo": tempo
+        "tempo": tempo,
+        "nos": nos
     }
     try:
         with open("estatisticas.json", "r") as arquivo:
@@ -28,31 +28,31 @@ def salvar_estatisticas(tempo, tamanho, algoritmo):
 
 def executar_algoritmo(n, opcao):
     bloqueios = gerar_bloqueios(n)
-    inicio = time.time()
 
     if opcao == "1":
-        solucao = resolver_dfs(n, bloqueios)
+        resultado = resolver_dfs(n, bloqueios)
         algoritmo = "DFS"
     elif opcao == "2":
-        solucao = resolver_bfs(n, bloqueios)
+        resultado = resolver_bfs(n, bloqueios)
         algoritmo = "BFS"
     elif opcao == "3":
-        solucao = resolver_ucs(n, bloqueios)
+        resultado = resolver_ucs(n, bloqueios)
         algoritmo = "UCS"
     elif opcao == "4":
-        solucao = resolver_astar(n, bloqueios)
+        resultado = resolver_astar(n, bloqueios)
         algoritmo = "A*"
     else:
         print("Opção inválida.")
         return None, None
 
-    fim = time.time()
-    tempo_total = fim - inicio
+    solucao = resultado["solucao"]
+    tempo_total = resultado["tempo"]
+    num_nos = resultado["num_nos"]
 
     if solucao:
         print(f"\nSolução encontrada para n={n} em {tempo_total:.3f}s usando {algoritmo}")
         imprimir_tabuleiro(n, solucao, bloqueios)
-        salvar_estatisticas(tempo_total, n, algoritmo)
+        salvar_estatisticas(tempo_total, n, algoritmo, num_nos)
     else:
         print(f"\nNenhuma solução encontrada para n={n} usando {algoritmo}.")
 
