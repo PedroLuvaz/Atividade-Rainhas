@@ -16,5 +16,131 @@
         "algoritmo": "BFS",
         "tempo": 0.010228872299194336,
         "nos": 1934
+    },
+    {
+        "tamanho": 8,
+        "algoritmo": "A*",
+        "tempo": 0.01593470573425293,
+        "nos": 1255
+    },
+    {
+        "tamanho": 9,
+        "algoritmo": "A*",
+        "tempo": 0.02760624885559082,
+        "nos": 1934
+    },
+    {
+        "tamanho": 10,
+        "algoritmo": "A*",
+        "tempo": 0.16947031021118164,
+        "nos": 9693
+    },
+    {
+        "tamanho": 11,
+        "algoritmo": "A*",
+        "tempo": 1.7825241088867188,
+        "nos": 81401
+    },
+    {
+        "tamanho": 12,
+        "algoritmo": "A*",
+        "tempo": 12.602656841278076,
+        "nos": 470022
+    },
+    {
+        "tamanho": 13,
+        "algoritmo": "A*",
+        "tempo": 38.1857168674469,
+        "nos": 1145801
+    },
+    {
+        "tamanho": 12,
+        "algoritmo": "A*",
+        "tempo": 12.495351076126099,
+        "nos": 470022
+    },
+    {
+        "tamanho": 8,
+        "algoritmo": "Gen\u00e9tico",
+        "tempo": 0.014302253723144531,
+        "nos": 0
+    },
+    {
+        "tamanho": 9,
+        "algoritmo": "Gen\u00e9tico",
+        "tempo": 0.015467166900634766,
+        "nos": 0
+    },
+    {
+        "tamanho": 10,
+        "algoritmo": "Gen\u00e9tico",
+        "tempo": 0.0388641357421875,
+        "nos": 0
+    },
+    {
+        "tamanho": 11,
+        "algoritmo": "Gen\u00e9tico",
+        "tempo": 0.08978676795959473,
+        "nos": 0
+    },
+    {
+        "tamanho": 12,
+        "algoritmo": "Gen\u00e9tico",
+        "tempo": 0.26122498512268066,
+        "nos": 0
+    },
+    {
+        "tamanho": 8,
+        "algoritmo": "Genetico",
+        "tempo": 0.016896486282348633,
+        "nos": 1000
+    },
+    {
+        "tamanho": 9,
+        "algoritmo": "Genetico",
+        "tempo": 0.010890007019042969,
+        "nos": 1000
+    },
+    {
+        "tamanho": 10,
+        "algoritmo": "Genetico",
+        "tempo": 0.040266990661621094,
+        "nos": 2000
+    },
+    {
+        "tamanho": 11,
+        "algoritmo": "Genetico",
+        "tempo": 0.08983588218688965,
+        "nos": 4000
+    },
+    {
+        "tamanho": 12,
+        "algoritmo": "Genetico",
+        "tempo": 0.2553548812866211,
+        "nos": 10500
+    },
+    {
+        "tamanho": 13,
+        "algoritmo": "Genetico",
+        "tempo": 0.8671369552612305,
+        "nos": 32500
+    },
+    {
+        "tamanho": 14,
+        "algoritmo": "Genetico",
+        "tempo": 1.0207781791687012,
+        "nos": 36000
+    },
+    {
+        "tamanho": 15,
+        "algoritmo": "Genetico",
+        "tempo": 0.7975039482116699,
+        "nos": 26000
+    },
+    {
+        "tamanho": 16,
+        "algoritmo": "Genetico",
+        "tempo": 9.088011741638184,
+        "nos": 277000
     }
 ]

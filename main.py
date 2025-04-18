@@ -5,6 +5,7 @@ from Algoritmos.dfs_solver import resolver_dfs
 from Algoritmos.bfs_solver import resolver_bfs
 from Algoritmos.ucs_solver import resolver_ucs
 from Algoritmos.astar_solver import resolver_astar
+from Algoritmos.genetico_solver import resolver_genetico  # Importar o algoritmo genético
 
 
 def salvar_estatisticas(tempo, tamanho, algoritmo, nos):
@@ -41,13 +42,16 @@ def executar_algoritmo(n, opcao):
     elif opcao == "4":
         resultado = resolver_astar(n, bloqueios)
         algoritmo = "A*"
+    elif opcao == "5":  # Nova opção para o algoritmo genético
+        resultado = resolver_genetico(n)
+        algoritmo = "Genetico"
     else:
         print("Opção inválida.")
         return None, None
 
     solucao = resultado["solucao"]
     tempo_total = resultado["tempo"]
-    num_nos = resultado["num_nos"]
+    num_nos = resultado.get("num_nos", 0)  # Algoritmo genético pode não usar "num_nos"
 
     if solucao:
         print(f"\nSolução encontrada para n={n} em {tempo_total:.3f}s usando {algoritmo}")
@@ -82,8 +86,9 @@ def main():
             print("2 - Busca em Largura (BFS)")
             print("3 - Busca de Custo Uniforme (UCS)")
             print("4 - A*")
+            print("5 - Algoritmo Genetico")  # Nova opção para o genético
 
-            opcao = input("Escolha o algoritmo (1-4): ")
+            opcao = input("Escolha o algoritmo (1-5): ")
             executar_algoritmo(n, opcao)
 
         elif escolha == "2":
@@ -112,8 +117,9 @@ def main():
             print("2 - Busca em Largura (BFS)")
             print("3 - Busca de Custo Uniforme (UCS)")
             print("4 - A*")
+            print("5 - Algoritmo Genetico")  # Nova opção para o genético
 
-            opcao = input("Escolha o algoritmo (1-4): ")
+            opcao = input("Escolha o algoritmo (1-5): ")
 
             for n in range(n_inicio, n_fim + 1):
                 print(f"\nExecutando para n={n}...")

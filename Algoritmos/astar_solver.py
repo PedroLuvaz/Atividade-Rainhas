@@ -3,9 +3,22 @@ import time
 from Utils.util import pode_colocar
 
 def heuristica(rainhas, linha, n, bloqueios):
+    """
+    Heurística melhorada para o problema das N-Rainhas.
+    Calcula o número de linhas restantes que ainda podem ser atacadas pelas rainhas já colocadas.
+    """
+    ataques = set()
+    for l, c in rainhas:
+        # Adicionar ataques horizontais, diagonais principais e secundárias
+        for i in range(linha, n):
+            ataques.add((i, c))  # mesma coluna
+            ataques.add((i, c + (i - l)))  # diagonal principal
+            ataques.add((i, c - (i - l)))  # diagonal secundária
+
+    # Contar as linhas restantes que não podem receber rainhas
     count = 0
     for l in range(linha, n):
-        if not any(pode_colocar(rainhas, l, c, bloqueios) for c in range(n)):
+        if all((l, c) in ataques or (l, c) in bloqueios for c in range(n)):
             count += 1
     return count
 
