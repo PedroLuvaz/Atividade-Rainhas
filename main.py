@@ -5,7 +5,7 @@ from Algoritmos.dfs_solver import resolver_dfs
 from Algoritmos.bfs_solver import resolver_bfs
 from Algoritmos.ucs_solver import resolver_ucs
 from Algoritmos.astar_solver import resolver_astar
-from Algoritmos.genetico_solver import resolver_genetico  # Importar o algoritmo genético
+from Algoritmos.genetico_solver import resolver_genetico_com_backtracking  # Importar o algoritmo genético
 
 
 def salvar_estatisticas(tempo, tamanho, algoritmo, nos):
@@ -14,6 +14,31 @@ def salvar_estatisticas(tempo, tamanho, algoritmo, nos):
         "algoritmo": algoritmo,
         "tempo": tempo,
         "nos": nos
+    }
+    try:
+        with open("estatisticas.json", "r") as arquivo:
+            historico = json.load(arquivo)
+    except FileNotFoundError:
+        historico = []
+
+    historico.append(dados)
+
+    with open("estatisticas.json", "w") as arquivo:
+        json.dump(historico, arquivo, indent=4)
+
+
+def salvar_estatisticas_genetico(tempo, tamanho, algoritmo, nos, melhor_fitness, media_fitness, geracao):
+    """
+    Salva as estatísticas específicas do algoritmo genético.
+    """
+    dados = {
+        "tamanho": tamanho,
+        "algoritmo": algoritmo,
+        "tempo": tempo,
+        "nos": nos,
+        "melhor_fitness": melhor_fitness,
+        "media_fitness": media_fitness,
+        "geracao": geracao
     }
     try:
         with open("estatisticas.json", "r") as arquivo:
@@ -43,7 +68,7 @@ def executar_algoritmo(n, opcao):
         resultado = resolver_astar(n, bloqueios)
         algoritmo = "A*"
     elif opcao == "5":  # Nova opção para o algoritmo genético
-        resultado = resolver_genetico(n)
+        resultado = resolver_genetico_com_backtracking(n)
         algoritmo = "Genetico"
     else:
         print("Opção inválida.")
@@ -53,12 +78,26 @@ def executar_algoritmo(n, opcao):
     tempo_total = resultado["tempo"]
     num_nos = resultado.get("num_nos", 0)  # Algoritmo genético pode não usar "num_nos"
 
-    if solucao:
-        print(f"\nSolução encontrada para n={n} em {tempo_total:.3f}s usando {algoritmo}")
-        imprimir_tabuleiro(n, solucao, bloqueios)
-        salvar_estatisticas(tempo_total, n, algoritmo, num_nos)
+    # Salvar informações adicionais para o algoritmo genético
+    if algoritmo == "Genetico":
+        melhor_fitness = resultado.get("melhor_fitness", None)
+        media_fitness = resultado.get("media_fitness", None)
+        geracao = resultado.get("geracao", None)
+
+        if solucao:
+            print(f"\nSolução encontrada para n={n} em {tempo_total:.3f}s usando {algoritmo}")
+            imprimir_tabuleiro(n, solucao, bloqueios)
+            salvar_estatisticas_genetico(tempo_total, n, algoritmo, num_nos, melhor_fitness, media_fitness, geracao)
+        else:
+            print(f"\nNenhuma solução encontrada para n={n} usando {algoritmo}.")
+            salvar_estatisticas_genetico(tempo_total, n, algoritmo, num_nos, melhor_fitness, media_fitness, geracao)
     else:
-        print(f"\nNenhuma solução encontrada para n={n} usando {algoritmo}.")
+        if solucao:
+            print(f"\nSolução encontrada para n={n} em {tempo_total:.3f}s usando {algoritmo}")
+            imprimir_tabuleiro(n, solucao, bloqueios)
+            salvar_estatisticas(tempo_total, n, algoritmo, num_nos)
+        else:
+            print(f"\nNenhuma solução encontrada para n={n} usando {algoritmo}.")
 
     return solucao, tempo_total
 

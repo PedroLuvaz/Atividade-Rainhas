@@ -142,5 +142,317 @@
         "algoritmo": "Genetico",
         "tempo": 9.088011741638184,
         "nos": 277000
+    },
+    {
+        "tamanho": 8,
+        "algoritmo": "Genetico",
+        "tempo": 0.014714717864990234,
+        "nos": 1000
+    },
+    {
+        "tamanho": 9,
+        "algoritmo": "Genetico",
+        "tempo": 0.014595270156860352,
+        "nos": 1000
+    },
+    {
+        "tamanho": 10,
+        "algoritmo": "Genetico",
+        "tempo": 0.03824329376220703,
+        "nos": 2000
+    },
+    {
+        "tamanho": 11,
+        "algoritmo": "Genetico",
+        "tempo": 0.08974432945251465,
+        "nos": 4000
+    },
+    {
+        "tamanho": 12,
+        "algoritmo": "Genetico",
+        "tempo": 0.252697229385376,
+        "nos": 10500
+    },
+    {
+        "tamanho": 13,
+        "algoritmo": "Genetico",
+        "tempo": 0.8487732410430908,
+        "nos": 32500
+    },
+    {
+        "tamanho": 14,
+        "algoritmo": "Genetico",
+        "tempo": 1.0059175491333008,
+        "nos": 36000
+    },
+    {
+        "tamanho": 15,
+        "algoritmo": "Genetico",
+        "tempo": 0.8050477504730225,
+        "nos": 26000
+    },
+    {
+        "tamanho": 16,
+        "algoritmo": "Genetico",
+        "tempo": 9.171954154968262,
+        "nos": 277000
+    },
+    {
+        "tamanho": 19,
+        "algoritmo": "Genetico",
+        "tempo": 0.7426762580871582,
+        "nos": 18500
+    },
+    {
+        "tamanho": 20,
+        "algoritmo": "Genetico",
+        "tempo": 5.999197959899902,
+        "nos": 139000
+    },
+    {
+        "tamanho": 8,
+        "algoritmo": "Genetico",
+        "tempo": 0.03828549385070801,
+        "nos": 2000
+    },
+    {
+        "tamanho": 16,
+        "algoritmo": "Genetico",
+        "tempo": 0.6488444805145264,
+        "nos": 17000
+    },
+    {
+        "tamanho": 128,
+        "algoritmo": "Genetico",
+        "tempo": 4200.0,
+        "nos": 36000000
+    },
+    {
+        "tamanho": 8,
+        "algoritmo": "Genetico",
+        "tempo": 0.03432583808898926,
+        "nos": 2000
+    },
+    {
+        "tamanho": 9,
+        "algoritmo": "Genetico",
+        "tempo": 0.04259300231933594,
+        "nos": 2000
+    },
+    {
+        "tamanho": 10,
+        "algoritmo": "Genetico",
+        "tempo": 0.04091644287109375,
+        "nos": 2000
+    },
+    {
+        "tamanho": 11,
+        "algoritmo": "Genetico",
+        "tempo": 0.17409086227416992,
+        "nos": 6000
+    },
+    {
+        "tamanho": 12,
+        "algoritmo": "Genetico",
+        "tempo": 0.4172334671020508,
+        "nos": 13000
+    },
+    {
+        "tamanho": 13,
+        "algoritmo": "Genetico",
+        "tempo": 0.3991885185241699,
+        "nos": 12000
+    },
+    {
+        "tamanho": 14,
+        "algoritmo": "Genetico",
+        "tempo": 2.382251262664795,
+        "nos": 63000
+    },
+    {
+        "tamanho": 15,
+        "algoritmo": "Genetico",
+        "tempo": 2.8750386238098145,
+        "nos": 75000
+    },
+    {
+        "tamanho": 16,
+        "algoritmo": "Genetico",
+        "tempo": 22.142986059188843,
+        "nos": 559000
+    },
+    {
+        "tamanho": 17,
+        "algoritmo": "Genetico",
+        "tempo": 2.3857977390289307,
+        "nos": 57000
+    },
+    {
+        "tamanho": 18,
+        "algoritmo": "Genetico",
+        "tempo": 101.3963942527771,
+        "nos": 2310000
+    },
+    {
+        "tamanho": 19,
+        "algoritmo": "Genetico",
+        "tempo": 168.2952606678009,
+        "nos": 3622000
+    },
+    {
+        "tamanho": 20,
+        "algoritmo": "Genetico",
+        "tempo": 246.6166307926178,
+        "nos": 5001000
+    },
+    {
+        "tamanho": 8,
+        "algoritmo": "Genetico",
+        "tempo": 0.03585457801818848,
+        "nos": 2000
+    },
+    {
+        "tamanho": 8,
+        "algoritmo": "Genetico",
+        "tempo": 0.03585457801818848,
+        "nos": 2000,
+        "melhor_fitness": null,
+        "media_fitness": null,
+        "geracao": null
+    },
+    {
+        "tamanho": 9,
+        "algoritmo": "Genetico",
+        "tempo": 0.03775143623352051,
+        "nos": 2000
+    },
+    {
+        "tamanho": 9,
+        "algoritmo": "Genetico",
+        "tempo": 0.03775143623352051,
+        "nos": 2000,
+        "melhor_fitness": null,
+        "media_fitness": null,
+        "geracao": null
+    },
+    {
+        "tamanho": 10,
+        "algoritmo": "Genetico",
+        "tempo": 0.03925299644470215,
+        "nos": 2000
+    },
+    {
+        "tamanho": 10,
+        "algoritmo": "Genetico",
+        "tempo": 0.03925299644470215,
+        "nos": 2000,
+        "melhor_fitness": null,
+        "media_fitness": null,
+        "geracao": null
+    },
+    {
+        "tamanho": 11,
+        "algoritmo": "Genetico",
+        "tempo": 0.1709134578704834,
+        "nos": 6000
+    },
+    {
+        "tamanho": 11,
+        "algoritmo": "Genetico",
+        "tempo": 0.1709134578704834,
+        "nos": 6000,
+        "melhor_fitness": null,
+        "media_fitness": null,
+        "geracao": null
+    },
+    {
+        "tamanho": 12,
+        "algoritmo": "Genetico",
+        "tempo": 0.4179086685180664,
+        "nos": 13000
+    },
+    {
+        "tamanho": 12,
+        "algoritmo": "Genetico",
+        "tempo": 0.4179086685180664,
+        "nos": 13000,
+        "melhor_fitness": null,
+        "media_fitness": null,
+        "geracao": null
+    },
+    {
+        "tamanho": 13,
+        "algoritmo": "Genetico",
+        "tempo": 0.4040341377258301,
+        "nos": 12000
+    },
+    {
+        "tamanho": 13,
+        "algoritmo": "Genetico",
+        "tempo": 0.4040341377258301,
+        "nos": 12000,
+        "melhor_fitness": null,
+        "media_fitness": null,
+        "geracao": null
+    },
+    {
+        "tamanho": 14,
+        "algoritmo": "Genetico",
+        "tempo": 2.2894515991210938,
+        "nos": 63000
+    },
+    {
+        "tamanho": 14,
+        "algoritmo": "Genetico",
+        "tempo": 2.2894515991210938,
+        "nos": 63000,
+        "melhor_fitness": null,
+        "media_fitness": null,
+        "geracao": null
+    },
+    {
+        "tamanho": 8,
+        "algoritmo": "Genetico",
+        "tempo": 0.036420345306396484,
+        "nos": 2000,
+        "melhor_fitness": 0,
+        "media_fitness": -4.388,
+        "geracao": 1
+    },
+    {
+        "tamanho": 9,
+        "algoritmo": "Genetico",
+        "tempo": 0.03863644599914551,
+        "nos": 2000,
+        "melhor_fitness": 0,
+        "media_fitness": -4.906,
+        "geracao": 1
+    },
+    {
+        "tamanho": 10,
+        "algoritmo": "Genetico",
+        "tempo": 0.04117393493652344,
+        "nos": 2000,
+        "melhor_fitness": 0,
+        "media_fitness": -5.656,
+        "geracao": 1
+    },
+    {
+        "tamanho": 11,
+        "algoritmo": "Genetico",
+        "tempo": 0.19051694869995117,
+        "nos": 6000,
+        "melhor_fitness": 0,
+        "media_fitness": -5.785,
+        "geracao": 5
+    },
+    {
+        "tamanho": 12,
+        "algoritmo": "Genetico",
+        "tempo": 0.45259666442871094,
+        "nos": 13000,
+        "melhor_fitness": 0,
+        "media_fitness": -6.433,
+        "geracao": 12
     }
 ]

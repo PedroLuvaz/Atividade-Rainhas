@@ -57,9 +57,38 @@ def mutacao(individuo, taxa_mutacao, n):
         individuo[i], individuo[j] = individuo[j], individuo[i]
     return individuo
 
-def resolver_genetico(n, tamanho_populacao=500, geracoes=1000, taxa_mutacao=0.2):
+def backtracking_corrigir(individuo, n):
     """
-    Resolve o problema das N-Rainhas usando um algoritmo genético.
+    Usa backtracking para corrigir conflitos em um indivíduo.
+    """
+    def is_safe(tabuleiro, linha, coluna):
+        for i in range(linha):
+            if tabuleiro[i] == coluna or \
+               abs(tabuleiro[i] - coluna) == abs(i - linha):
+                return False
+        return True
+
+    def backtrack(tabuleiro, linha):
+        if linha == n:
+            return tabuleiro
+        for coluna in range(n):
+            if is_safe(tabuleiro, linha, coluna):
+                tabuleiro[linha] = coluna
+                resultado = backtrack(tabuleiro, linha + 1)
+                if resultado:
+                    return resultado
+        return None
+
+    # Corrigir o indivíduo usando backtracking
+    tabuleiro = [-1] * n
+    for i in range(len(individuo)):
+        tabuleiro[i] = individuo[i]
+
+    return backtrack(tabuleiro, len(individuo))
+
+def resolver_genetico_com_backtracking(n, tamanho_populacao=1000, geracoes=5000, taxa_mutacao=0.3):
+    """
+    Resolve o problema das N-Rainhas usando um algoritmo genético com backtracking.
     """
     inicio = time.time()
     populacao = gerar_populacao(tamanho_populacao, n)
@@ -88,7 +117,26 @@ def resolver_genetico(n, tamanho_populacao=500, geracoes=1000, taxa_mutacao=0.2)
                     "solucao": populacao[i],
                     "geracoes": geracao + 1,
                     "tempo": fim - inicio,
-                    "num_nos": total_individuos_avaliados  # Adicionar o número de indivíduos avaliados
+                    "num_nos": total_individuos_avaliados,
+                    "melhor_fitness": max(fitnesses),
+                    "media_fitness": sum(fitnesses) / len(fitnesses),
+                    "geracao": geracao + 1
+                }
+
+    # Fase de Backtracking
+    for individuo in populacao:
+        if fitness(individuo, n) > -10:  # Apenas indivíduos com poucos ataques
+            solucao = backtracking_corrigir(individuo, n)
+            if solucao:
+                fim = time.time()
+                return {
+                    "solucao": solucao,
+                    "geracoes": geracoes,
+                    "tempo": fim - inicio,
+                    "num_nos": total_individuos_avaliados,
+                    "melhor_fitness": max(fitnesses),
+                    "media_fitness": sum(fitnesses) / len(fitnesses),
+                    "geracao": geracoes
                 }
 
     fim = time.time()
@@ -96,5 +144,8 @@ def resolver_genetico(n, tamanho_populacao=500, geracoes=1000, taxa_mutacao=0.2)
         "solucao": None,
         "geracoes": geracoes,
         "tempo": fim - inicio,
-        "num_nos": total_individuos_avaliados  # Adicionar o número de indivíduos avaliados
+        "num_nos": total_individuos_avaliados,
+        "melhor_fitness": max(fitnesses),
+        "media_fitness": sum(fitnesses) / len(fitnesses),
+        "geracao": geracoes
     }
